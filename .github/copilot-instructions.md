@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a **shared Rust library** (git submodule) providing the encrypted secret persistence layer for the Iceberg Protocol ecosystem. It is included as a submodule in every Iceberg Protocol app (cyf, proof-of-zsozso, mlm, gun-connect, admin, merlin).
+This is a **shared Rust library** (Cargo git dependency) providing the encrypted secret persistence layer for the Iceberg Protocol ecosystem. It is consumed as a Cargo git dependency by every Iceberg Protocol app (cyf, proof-of-zsozso, mlm, gun-connect, admin, merlin).
 
 **This is NOT a standalone app.** It is a library crate — no `main.rs`, no `Dioxus.toml`, no PWA assets.
 
@@ -17,7 +17,8 @@ Provides the `Store` trait and its implementations (`IndexedDbStore`, `LocalStor
 - **`src/store/local_storage.rs`** — `LocalStorageStore`: browser localStorage (unencrypted fallback)
 - **`src/store/passkey.rs`** — WebAuthn passkey functions: register, init, verify, encrypt, decrypt (delegates to passkey_bridge.js)
 - **`src/store/i18n/`** — `StoreI18n` trait + 5 language implementations
-- **`src/i18n.rs`** — `Language` enum shared across the ecosystem
+
+Note: The `Language` enum and `StoreI18n` trait definition live in the `zsozso-common` crate. This library implements `StoreI18n` for each language.
 
 ## Core Traits
 
