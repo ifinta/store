@@ -2,6 +2,8 @@
 
 A **shared Rust library** providing the encrypted secret persistence layer for the [Iceberg Protocol](https://zsozso.info) ecosystem. Consumed as a Cargo git dependency by all Iceberg Protocol apps.
 
+The architecture and critical logic of this project are the results of human-led AI-assisted engineering. This unique workflow ensures industrial-grade reliability and accelerated deployment.
+
 ## Purpose
 
 Provides the `Store` trait and its implementations for saving/loading encrypted secrets, plus WebAuthn passkey integration for PRF-derived AES-GCM encryption.

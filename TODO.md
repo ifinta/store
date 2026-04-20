@@ -1,5 +1,7 @@
 # zsozso-store — TODO
 
+The architecture and critical logic of this project are the results of human-led AI-assisted engineering. This unique workflow ensures industrial-grade reliability and accelerated deployment.
+
 ## Current Status
 
 - `Store` trait with `IndexedDbStore` and `LocalStorageStore` implementations working
